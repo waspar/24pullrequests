@@ -1,26 +1,60 @@
-%h1
-  24 Pull Requests
-  %span Giving back little gifts of code for Christmas
+%header.header
+  .container
 
-= link_to 'Login with Github',  login_path, :class => 'btn'
+    .row
+      .span12
 
-%p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
-%p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+        %h1 24 Pull Requests
+        %img#logo(src="/assets/24pr-logo.jpg")
+        %img#byline(src="/assets/header-logo.png")
+        %img#subhead(src="/assets/header-subhead.png")
 
-%hr
-
-= render :partial => 'shared/social_buttons'
-
-%hr
+.container
   .span12
-    %h2= @quote.comment
-    %p
-      = @quote.name
-      - if @quote.company
-        %span= @quote.company
-      %span= @quote.twitter_handle || @quote.github_handle
+    .content
+      %section.intro
+        .left
+          %h2 What it's all about
+          %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas. 
 
-%hr
+          %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+          = link_to 'Login with Github',  login_path, :class => 'btn'
+
+          %hr
+
+        .right
+          %h3 'Tis the season
+          %p You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love recieving pull requests!
+
+          %h3 Get Involved
+          %p There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
+
+          %h3 Build your Profile
+          %p Contributing to open source projects is also a great way to build your profile in the community and improve your cv. It's really easy to get started, even small contributions can be really valuable to a project.
+
+
+      %section.developers
+        %h2 Developers already involved
+        %ul#users
+          - @users.each do |user|
+            %li
+              = link_to image_tag(gravatar_url(user.gravatar_id), :width => 80, :alt =>user.nickname), user.nickname
+
+
+      %section.suggested_project
+        %h2 Suggested Projects
+        %p Know of any projects you want to suggest? Let us know!
+        
+.row.clearfix
+  .span12
+    %h2
+      Suggested Projects
+      = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
+    %p
+      Can't think of a project you would like to help out? We've put together a list of popular projects,
+      = link_to 'browse them all here.', projects_path
+      
+  #projects= render @projects
 
 .row.clearfix
   .span4
