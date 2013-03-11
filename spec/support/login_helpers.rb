@@ -1,6 +1,8 @@
 module LoginHelpers
   def mock_twitter_auth
     OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
+      :provider => 'twitter',
+      :uid => '12345',
       :info => {
         :nickname => Faker::Lorem.word
       },
@@ -37,5 +39,5 @@ module LoginHelpers
 end
 
 RSpec.configure do |config|
-  config.include LoginHelpers, :type => :request
+  config.include LoginHelpers, :type => :feature
 end
