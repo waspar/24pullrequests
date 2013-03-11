@@ -1,13 +1,14 @@
 source 'http://rubygems.org'
 ruby "2.0.0"
 
-gem 'rails', '3.2.12'
+gem 'rails', '4.0.0.beta1'
 gem 'pg'
 gem 'unicorn'
 gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
+gem "haml", "~> 4.0.1.rc.1"
 gem 'haml-rails'
 gem 'octokit'
 gem "bugsnag"
@@ -16,17 +17,18 @@ gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
-gem 'jquery-rails', '2.1.4'
+gem 'jquery-rails'#, '2.1.4'
 gem "less-rails"
-gem "twitter-bootstrap-rails", '2.2.4'
-gem 'simple_form'
+gem "twitter-bootstrap-rails"#, '2.2.4'
+gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'rack-google-analytics'
+gem 'protected_attributes'
+gem 'sass-rails', "~> 4.0.0.beta1"
+gem "coffee-rails", "~> 4.0.0.beta1"
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'therubyracer', '0.10.2', :platforms => :ruby
-  gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'uglifier'
 end
 
 group :development do
@@ -36,7 +38,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'rb-fsevent', '~> 0.9.1'
   gem 'factory_girl_rails'
   gem 'faker'
 
@@ -48,7 +49,7 @@ group :development, :test do
 
   # Javascript
   gem 'konacha'
-  gem 'chai-jquery-rails'
+  # gem 'chai-jquery-rails'
   gem 'sinon-chai-rails'
   gem 'sinon-rails'
   gem 'ejs'
@@ -56,7 +57,7 @@ end
 
 group :test do
   gem "capybara", '1.1.4'
-  gem 'database_cleaner'
+  gem "database_cleaner", "~> 1.0.0.RC1"
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
   gem 'poltergeist'
