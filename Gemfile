@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.0.0"
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0.rc1'
 
 gem 'jquery-rails', '2.1.4'
 
@@ -15,18 +15,20 @@ gem 'haml-rails'
 gem 'octokit'
 gem "bugsnag"
 gem 'rabl'
+gem 'haml', '~> 4.0.0'
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-gem 'simple_form'
+gem 'simple_form', '~> 3.0.0.beta1'
 gem 'rack-google-analytics'
+gem 'protected_attributes'
 
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+  gem 'sass-rails', "~> 4.0.0.rc1"
+  gem 'coffee-rails', "~> 4.0.0.rc1"
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier'
 end
@@ -50,7 +52,7 @@ group :development, :test do
 
   # Javascript
   gem 'konacha'
-  gem 'chai-jquery-rails'
+  # gem 'chai-jquery-rails'
   gem 'sinon-chai-rails'
   gem 'sinon-rails'
   gem 'ejs'
