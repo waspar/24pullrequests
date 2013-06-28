@@ -26,6 +26,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
+    anjlab-bootstrap-rails (2.3.1.2)
+      railties (>= 3.0)
+      sass (>= 3.2)
     arel (4.0.0)
     atomic (1.1.10)
     brakeman (2.0.0)
@@ -63,7 +66,6 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colorize (0.5.8)
-    commonjs (0.2.6)
     crack (0.4.0)
       safe_yaml (~> 0.9.0)
     daemons (1.1.9)
@@ -142,12 +144,6 @@ GEM
       sprockets
     launchy (2.3.0)
       addressable (~> 2.3)
-    less (2.3.2)
-      commonjs (~> 0.2.6)
-    less-rails (2.3.3)
-      actionpack (>= 3.1)
-      less (~> 2.3.1)
-    libv8 (3.11.8.17)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -237,7 +233,6 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
-    ref (1.0.5)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -296,9 +291,6 @@ GEM
       sprockets (~> 2.8)
     temple (0.6.5)
     terminal-table (1.4.5)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
-      ref
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -315,11 +307,6 @@ GEM
       faraday (~> 0.8, < 0.10)
       multi_json (~> 1.0)
       simple_oauth (~> 0.2)
-    twitter-bootstrap-rails (2.2.7)
-      actionpack (>= 3.1)
-      execjs
-      rails (>= 3.1)
-      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -338,6 +325,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anjlab-bootstrap-rails
   brakeman
   bugsnag
   capybara
@@ -357,9 +345,7 @@ DEPENDENCIES
   kaminari
   konacha
   launchy
-  less-rails
   memcachier
-  minitest
   newrelic_rpm
   octokit
   omniauth
@@ -381,11 +367,9 @@ DEPENDENCIES
   simplecov
   sinon-chai-rails
   sinon-rails
-  therubyracer
   thin
   timecop
   twitter
-  twitter-bootstrap-rails
   uglifier
   unicorn
   webmock

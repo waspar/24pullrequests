@@ -20,16 +20,14 @@ gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
-gem "less-rails"
-gem "twitter-bootstrap-rails"
 gem 'simple_form', '~> 3.0.0.rc'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'rack-google-analytics'
 gem 'protected_attributes'
 
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'therubyracer', :platforms => :ruby
   gem 'uglifier'
 end
 
@@ -68,7 +66,6 @@ group :test do
   gem 'webmock', :require => false
   gem 'poltergeist'
   gem 'timecop'
-  gem 'minitest'
 end
 
 group :production do
