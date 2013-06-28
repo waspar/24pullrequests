@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby "2.0.0"
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 
-gem 'jquery-rails', '2.1.4'
+gem 'jquery-rails'
 
 gem 'pg'
 gem 'unicorn'
@@ -22,13 +22,13 @@ gem 'kaminari'
 gem 'twitter'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-gem 'simple_form', '~> 3.0.0.beta1'
+gem 'simple_form', '~> 3.0.0.rc'
 gem 'rack-google-analytics'
 gem 'protected_attributes'
 
 group :assets do
-  gem 'sass-rails', "~> 4.0.0.rc1"
-  gem 'coffee-rails', "~> 4.0.0.rc1"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier'
 end
@@ -59,7 +59,7 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", '2.0.2'
+  gem "capybara"
   gem 'capybara-webkit'
   gem 'launchy'
 
