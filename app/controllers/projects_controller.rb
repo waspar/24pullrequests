@@ -80,7 +80,7 @@ class ProjectsController < ApplicationController
   end
 
   def languages
-    params[:languages].split(',')
+    params[:languages].split(',') if params[:languages]
   end
 
   def labels

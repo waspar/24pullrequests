@@ -355,7 +355,7 @@ footer {
     -webkit-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
     a {
-      color: $link-color;
+      color: $label-link-color;
       text-shadow: none;
       text-decoration: none;
     }
@@ -363,7 +363,7 @@ footer {
       opacity: 0.5;
     }
     &.highlighted {
-      background: $link-color;
+      background: $label-link-color;
       a {
         color: #fff;
       }
