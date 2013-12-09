@@ -9,6 +9,8 @@
 %hr
 %h4=t("projects.filter_by_language")
 #ul#labels.row
+  %li.highlighted
+    = link_to 'Everything', '#'
   - Label.all.each do |label|
     %li
       = label_link label.name
