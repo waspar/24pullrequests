@@ -11,14 +11,14 @@ module ApplicationHelper
     end
   end
 
-  def language_link(language)
+  def language_link(language, label=nil)
     language = if language.respond_to? :map
       language.map &method(:escape_language)
     else
       escape_language language
     end
     # label = label || [language].flatten.join(', ')
-    link_to language, '#', data: {language: language}
+    link_to label, '#', data: {language: language}
   end
 
   def label_link(label)

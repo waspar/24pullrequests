@@ -18,10 +18,10 @@
     = link_to t("everything"), '#'
   - if current_user
     %li.highlighted
-      = language_link @current_user_languages
+      = language_link @current_user_languages, t("projects.for_you")
   - Project::LANGUAGES.each do |language|
     %li
-      = language_link language
+      = language_link language, language
 %hr
 - if @has_more_projects
   #projects.row-fluid
