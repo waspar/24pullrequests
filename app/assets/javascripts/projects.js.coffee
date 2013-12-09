@@ -23,7 +23,7 @@ $ ->
     else
       $('#labels li')
         .addClass('disabled')
-        .find($.map(languages, (l) -> "a[data-label='#{l}']").join(','))
+        .find($.map(labels, (l) -> "a[data-label='#{l}']").join(','))
         .parent('li')
         .removeClass('disabled')
 
