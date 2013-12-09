@@ -38,13 +38,13 @@ $ ->
       resetLanguage()
       return false
 
-    unless e.ctrlKey or e.metaKey
-      languages = [].concat(clicked_language)
+    # unless e.ctrlKey or e.metaKey
+    #   languages = [].concat(clicked_language)
+    # else
+    unless clicked_language in languages
+      languages.push clicked_language
     else
-      unless clicked_language in languages
-        languages.push clicked_language
-      else
-        languages = (language for language in languages when language != clicked_language)
+      languages = (language for language in languages when language != clicked_language)
 
     unless languages.length > 0
       resetLanguage()
