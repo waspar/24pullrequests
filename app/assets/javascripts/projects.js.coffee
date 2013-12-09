@@ -70,14 +70,13 @@ $ ->
       url = '/projects/filter?labels='+labels.join(',')        
     else
       url = '/projects/filter?languages='+languages.join(',')
-    return "url is " + url
+    return url
 
 
   filterProjects = ->
-    console.log generateFilterUrl()
-    # $.ajax
-    #   url: generateFilterUrl()
-    #   dataType: 'script'
+    $.ajax
+      url: generateFilterUrl()
+      dataType: 'script'
 
   resetLanguage = ->
       $('#languages li').removeClass('disabled')
