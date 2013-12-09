@@ -11,14 +11,23 @@ module ApplicationHelper
     end
   end
 
-  def language_link(language, label=nil)
+  def language_link(language)
     language = if language.respond_to? :map
       language.map &method(:escape_language)
     else
       escape_language language
     end
-    label = label || [language].flatten.join(', ')
-    link_to label, '#', data: {language: language}
+    # label = label || [language].flatten.join(', ')
+    link_to language, '#', data: {language: language}
+  end
+
+  def label_link(label)
+    label = if label.respond_to? :map
+      label.map &method(:escape_language)
+    else
+      escape_language label
+    end
+    link_to label, '#', data: {label: label}
   end
 
   def gravatar_url(digest='', size = '80')
